@@ -374,7 +374,7 @@ func logicalTableMapSchema() *schema.Resource {
 				ValidateFunc: validation.StringLenBetween(1, 64),
 			},
 			"data_transforms": {
-				Type:     schema.TypeList,
+				Type:     schema.TypeSet,
 				Computed: true,
 				Optional: true,
 				MinItems: 1,
@@ -458,7 +458,7 @@ func logicalTableMapSchema() *schema.Resource {
 							},
 						},
 						"project_operation": {
-							Type:     schema.TypeList,
+							Type:     schema.TypeSet,
 							Computed: true,
 							Optional: true,
 							MaxItems: 1,
@@ -495,7 +495,7 @@ func logicalTableMapSchema() *schema.Resource {
 							},
 						},
 						"tag_column_operation": {
-							Type:     schema.TypeList,
+							Type:     schema.TypeSet,
 							Computed: true,
 							Optional: true,
 							MaxItems: 1,
